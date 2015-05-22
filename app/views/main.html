@@ -1,0 +1,65 @@
+<main>
+<toggle-switch ng-model="switchStatus" on-label="English" off-label="Español" ng-click="toggle()"></toggle-switch>            
+<h1 ng-repeat="title in titleEn" ng-if="EnVi">
+    {{title.title}}
+</h1>
+
+<h1 ng-repeat="title in titleEs" ng-if="EsVi">
+    {{title.title}}
+</h1>
+
+<div id="expertise">
+
+
+    <section ng-repeat="good in goodEn" ng-if="EnVi">
+        <h2 class="subhead" >
+            <svg class="icon pos"><use xlink:href="#icon-checkmark-circle"></use></svg>
+            {{good.title}}
+        </h2>
+
+        <p>{{good.description}}</p>
+    </section>
+
+    <section ng-repeat="good in goodEs" ng-if="EsVi">
+        <h2 class="subhead" >
+            <svg class="icon pos"><use xlink:href="#icon-checkmark-circle"></use></svg>
+            {{good.title}}
+        </h2>
+
+        <p>{{good.description}}</p>
+    </section>
+
+    <section ng-repeat="warning in warningEn" ng-if="EnVi">
+        <h2 class="subhead">
+            <svg class="icon caution"><use xlink:href="#icon-warning"></use></svg>
+            {{warning.title}}
+        </h2>
+        <p>{{warning.description}}</p>
+    </section>
+
+    <section ng-repeat="warning in warningEs" ng-if="EsVi">
+        <h2 class="subhead">
+            <svg class="icon caution"><use xlink:href="#icon-warning"></use></svg>
+            {{warning.title}}
+        </h2>
+        <p>{{warning.description}}</p>
+    </section>
+
+    <section ng-repeat="bad in badEn" ng-if="EnVi">
+        <h2 class="subhead">
+            <svg class="icon neg"><use xlink:href="#icon-cancel-circle"></use></svg>
+            {{bad.title}}
+        </h2>
+        <p>{{bad.description}}</p>
+    </section>
+
+    <section ng-repeat="bad in badEs" ng-if="EsVi">
+        <h2 class="subhead">
+            <svg class="icon neg"><use xlink:href="#icon-cancel-circle"></use></svg>
+            {{bad.title}}
+        </h2>
+        <p>{{bad.description}}</p>
+    </section>
+</div>
+
+</main>
